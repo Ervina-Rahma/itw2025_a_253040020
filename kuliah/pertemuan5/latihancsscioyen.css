@@ -1,0 +1,27 @@
+ h1{
+     color:rgb(243, 203, 210); 
+     font-size: 50px; 
+     font-family: "Italianno", cursive;
+     text-decoration: underline;
+     text-align: center;
+    }
+ h2{
+     color: rgb(177, 216, 248);
+     font-size: 40px;
+     text-decoration: line-through; 
+    } 
+ body{
+     height: 200vh;
+     background-image: url(/image);
+     background-repeat: repeat-x;
+     background-image: top left;
+     background-position: ;
+     background-size: ;
+    }  
+    a{
+       display: ;
+       width: ;
+       height: ;
+       background-position: ; 
+    }
+      

@@ -1,0 +1,19 @@
+body{
+  background-image: url(img3/background.png);
+  background-repeat: repeat-x;
+}
+h1{
+     color:rgb(243, 203, 210); 
+     font-size: 80px; 
+     font-family: "Italianno", cursive;
+     text-align: center;
+}
+h3{
+     color: rgb(224, 181, 219); 
+     font-family: "Denk One", sans-serif;
+     font-weight: 50PX ;
+     text-align: center; 
+}
+h4{
+     text-align: center;
+}
