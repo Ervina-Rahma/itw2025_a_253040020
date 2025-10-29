@@ -1,0 +1,100 @@
+body {
+    line-height: 1;
+}
+ol, ul{
+    list-style: none;
+}
+blockquote, q{
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q{
+    content: '';
+    content: none;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*style*/
+body{
+    font: 16px/28px arial, sans-serif;
+    background-color: #eaeaea;
+    background-image: url(keramik.jpg);
+    color: #333;
+}
+ h1{
+    font-family:   "Old Standard TT", serif;
+    margin: 15px;
+ }   
+ h1 .judul{
+    text-align: center;
+ }
+.container{
+    width: 800px;
+    margin: auto;
+    background-color: white;
+}
+.header{
+    padding: 10px;
+}
+  .header .judul{
+      font-size: 40px;
+      font-weight: bold;
+  }  
+  .nav{
+    background-color: #ba88ba;
+  }
+
+  .header a{
+    text-decoration: none;
+    color: rgb(241, 159, 212);
+    padding: 3px;
+  }
+  .header a:hover{
+    background-color: rgb(134, 206, 254);
+    color: white;
+  }
+  .hero{
+    height: 380px;
+    background-image: url(moeci.jpeg);
+    background-size: cover;
+    background-position: 0 -30px;
+    border-top: 5px solid rgb(86, 160, 197);
+    border-bottom: 5px solid rgb(86, 160, 197);
+  }
+  .moeci{
+    height: 300px;
+    background-image: url(p.png);
+    background-size: cover;
+    background-position: 0 -50px;
+  }
+  .content{
+    padding: 20px;
+  }
+  .content h2{
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .content .penulis{
+    font-size: 11px;
+    margin-top: -5px;
+  }
+  .content .penulis a{
+    color: rgb(252, 158, 227);
+    text-decoration: none;
+  }
+  .content p{
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .footer{
+    background-color: #ba88ba;
+    padding: 10px;
+  }
+  .footer .copy{
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+  }
