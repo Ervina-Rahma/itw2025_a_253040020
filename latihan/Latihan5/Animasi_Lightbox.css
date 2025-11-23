@@ -1,0 +1,318 @@
+h1 {
+  margin: 50px;
+  box-sizing: border-box;
+  font-family: "Old Standard TT", serif;
+  color: #000000;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* BODY */
+body {
+  color: #fff;
+  overflow-x: hidden;
+  line-height: 1.4;
+  background-image: url("thumbs/Demon Slayer Nezuko Cloth Wallpaper.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* NAVIGATION */
+nav {
+  width: 100%;
+  padding: 50px 50px;
+  box-sizing: border-box;
+  position: absolute;       
+  top: 0;
+  right: 0;
+  display: flex;         
+  justify-content: flex-end; 
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  display: inline-block;
+  font-family: 'Fredoka', cursive;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 12px;
+  background-color: rgba(85, 179, 22, 0.5);
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #e10fbe;
+  transform: scale(1.1);
+}
+
+
+
+/* CONTAINER */
+.container {
+  width: 800px;
+  margin: auto;
+  height: auto;
+  background-color: rgb(236, 90, 90);
+  box-shadow: #000000 0px 0px 10px;
+  border-radius: 10px;
+}
+
+/* LIGHTBOX */
+.lightbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; 
+  padding: 0;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.lightbox li {
+  width: 100px;
+  height: 100px;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+}
+
+.lightbox li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.lightbox li img:hover {
+  transform: scale(1.05);
+}
+
+.lightbox li span {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(214, 92, 163, 0.703);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lightbox li:hover span {
+  opacity: 1;
+}
+/*overlay*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,0,180,0.6);
+  animation: zoomDanFadeIn 0.5s ease;
+  z-index: 10; 
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(122,171,82,0.9);
+  border: 1px solid #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+}
+
+.overlay:target .close {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.prev, .next {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-indent: -9999px; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.prev { left: 6%; background-image: url('thumbs/Desain_tanpa_judul__13_-removebg-preview.png'); }
+.next { right: 6%; background-image: url('thumbs/Desain_tanpa_judul__12_-removebg-preview.png'); }
+
+.overlay:target .prev,
+.overlay:target .next {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+/* animasi keyframes */
+@keyframes fadeAjah {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes zoomDanFadeIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* GENRE */
+.genre {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.genre button {
+  background: #cd4391;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.genre button:hover {
+  background: #bc017e;
+  transform: translateY(-5px);
+}
+
+/* CHARACTERS */
+.characters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+}
+
+.char-card {
+  background:linear-gradient(135deg, #f9c5d1, #f0a1b8);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 180px;
+  transition: 0.4s;
+}
+
+.char-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px #c00180;
+}
+
+.char-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* BAMBU  */
+.bambu {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  border-radius: 15px;
+  margin: 20px;
+  background: linear-gradient(135deg, #f9c5d1, #f0a1b8);
+}
+
+.bambu .quote-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;    
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bambu .lightbox-img {
+  width: 250px;  
+  height: auto;
+  margin: 0;
+}
+
+.bambu blockquote {
+  max-width: 500px;
+  text-align: left;  
+}
+
+
+blockquote {
+  font-style: italic;
+  background: rgba(14, 13, 14, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+blockquote,
+section,
+img {
+  position: static;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(122, 171, 82, 0.9);
+  font-size: 14px;
+  color: #fff;
+  border-radius: 10px;
+}
